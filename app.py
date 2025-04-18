@@ -2,14 +2,14 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+
 #secreat key
-app.config['SECRET_KEY'] = "your_secret_key"
-app.config['']
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SECRET_KEY'] = "your_secret_key" # ?
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db' # ?
 
 db = SQLAlchemy(app)
 
-@app.rout("/hello-world", methods=["GET"])
+@app.route("/hello-world", methods=["GET"])
 def hello_world():
     return "Hello world"
 
